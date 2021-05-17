@@ -67,8 +67,8 @@ def sendEmail(to, content) :
     server.starttls()
 
     # Enable low security in gmail
-    server.login('cybergeek1234@gmail.com', 'Cyber$1234')
-    server.sendmail('cybergeek1234@gmail.com', to, content)
+    server.login('email', 'password')
+    server.sendmail('email', to, content)
     server.close()
 
 
@@ -131,7 +131,7 @@ def run() :
             talk("What should I say?")
             content = take_mid()
 
-            to = 'ds74113@gmail.com'
+            to = 'email to send'
             sendEmail(to, content)
             talk("Email has been sent successfully !")
             print("Email has been sent successfully !")
