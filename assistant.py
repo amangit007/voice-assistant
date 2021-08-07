@@ -14,6 +14,8 @@ import subprocess
 import winshell
 from ecapture import ecapture as ec
 from forex_python.converter import CurrencyRates
+import assistant_name
+
 
 listener = sr.Recognizer()
 engine = pyttsx3.init()
@@ -38,7 +40,7 @@ def take() :
             voice = listener.listen(source)
             command = listener.recognize_google(voice)
             command = command.lower()
-            name = set_name()
+            name = assistant_name.set_name()
             if name in command :
                 command = command.replace(name, '')
                 print(command)
