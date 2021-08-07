@@ -149,7 +149,7 @@ def run() :
             city = take_mid()
 
             response = requests.get("http://api.openweathermap.org/data/2.5/weather?q={}&appid={}".format(city,
-                                                                                                          "470551ef1a3184b421bb48e0a32b67d6"))
+                                                                                                          "YOUR API KEY"))
             x = response.json()
 
             if x["cod"] != "404" :
@@ -176,7 +176,7 @@ def run() :
     elif 'news' in command :
 
         try :
-            main_url = "https://newsapi.org/v1/articles?source=the-hindu&sortBy=top&apiKey=647823e05b5b48a1a5db3c818cb12965"
+            main_url = "https://newsapi.org/v1/articles?source=the-hindu&sortBy=top&apiKey=YOUR API KEY"
 
             # fetching data in json format
             open_news = requests.get(main_url).json()
